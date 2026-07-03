@@ -5,8 +5,8 @@ Install once, and they work in **every project on your machine** until you delet
 
 | What | Name | What it does for you |
 |------|------|----------------------|
-| Agent | **wrm-security-checker** | Audits your whole codebase for security holes, explains each one in simple words (what a hacker could actually do), fixes what's safe to fix, then **always runs a second scan** to catch anything missed, and gives you a plain-English report with a before/after risk grade. Built on Anthropic's official security-review categories. |
-| Skill | **wrm-preflight** | For long build tasks: asks you **every** question, decision, and permission approval upfront in one ~10-minute batch, so you can go offline while Claude builds. Ends with a mandatory self-verification (runs tests, exercises the app for real, rechecks your original request line by line) and an honest report. |
+| Agent | **checkandsecure** | Audits your whole codebase for security holes, explains each one in simple words (what a hacker could actually do), fixes what's safe to fix, then **always runs a second scan** to catch anything missed, and gives you a plain-English report with a before/after risk grade. Built on Anthropic's official security-review categories. |
+| Skill | **ask-drish-now** | For long build tasks: asks you **every** question, decision, and permission approval upfront in one ~10-minute batch, so you can go offline while Claude builds. Ends with a mandatory self-verification (runs tests, exercises the app for real, rechecks your original request line by line) and an honest report. |
 
 ## Install (2 minutes)
 
@@ -34,8 +34,8 @@ folders — nothing else is touched. Restart Claude Code afterwards.
 ## How to use
 
 - **Security audit:** open any project in Claude Code and say
-  `run wrm-security-checker` (or just "security check").
-- **Go-offline build:** type `/wrm-preflight` followed by your task, answer
+  `run checkandsecure` (or just "security check").
+- **Go-offline build:** type `/ask-drish-now` followed by your task, answer
   the one batch of questions, say "go", and walk away.
 
 ## Optional: get reminded to run the security checker every session
@@ -50,7 +50,7 @@ Add this to your `~/.claude/settings.json` (merge with what's already there):
         "hooks": [
           {
             "type": "command",
-            "command": "echo 'SECURITY REMINDER: The user has a global wrm-security-checker agent (5-phase security audit: detect vulnerabilities, explain in simple words, fix, mandatory re-check, report). Once per session, at a natural moment where it is relevant - e.g. after writing new code, touching auth/API/user-data handling, or before a deploy - remind the user to run the wrm-security-checker agent. Mention it only once per session; do not nag.'",
+            "command": "echo 'SECURITY REMINDER: The user has a global checkandsecure agent (5-phase security audit: detect vulnerabilities, explain in simple words, fix, mandatory re-check, report). Once per session, at a natural moment where it is relevant - e.g. after writing new code, touching auth/API/user-data handling, or before a deploy - remind the user to run the checkandsecure agent. Mention it only once per session; do not nag.'",
             "timeout": 10
           }
         ]
@@ -64,8 +64,8 @@ Add this to your `~/.claude/settings.json` (merge with what's already there):
 
 Delete the copied files — that's all:
 
-- `~/.claude/agents/wrm-security-checker.md`
-- `~/.claude/skills/wrm-preflight/` (the folder)
+- `~/.claude/agents/checkandsecure.md`
+- `~/.claude/skills/ask-drish-now/` (the folder)
 - the `hooks` block above from `~/.claude/settings.json`, if you added it
 
 ## Good to know

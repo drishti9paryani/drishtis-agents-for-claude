@@ -13,7 +13,7 @@ Copy-Item (Join-Path $repoRoot "skills\*") (Join-Path $claudeDir "skills\") -Rec
 
 Write-Host ""
 Write-Host "Installed to $claudeDir :" -ForegroundColor Green
-Write-Host "  - agents\wrm-security-checker.md"
-Write-Host "  - skills\wrm-preflight\SKILL.md"
+Write-Host "  - agents\checkandsecure.md"
+Write-Host "  - skills\ask-drish-now\SKILL.md"
 Write-Host ""
-Write-Host "Restart Claude Code, then try: 'run wrm-security-checker' or '/wrm-preflight'"
+Write-Host "Restart Claude Code, then try: 'run checkandsecure' or '/ask-drish-now'"

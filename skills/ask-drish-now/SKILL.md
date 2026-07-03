@@ -1,8 +1,8 @@
 ---
-name: wrm-preflight
+name: ask-drish-now
 description: Use BEFORE starting any long or multi-step build task when the
   user wants to answer everything upfront and go offline while Claude works.
-  Trigger when the user says "/wrm-preflight", "preflight", "ask me everything
+  Trigger when the user says "/ask-drish-now", "preflight", "ask me everything
   now", "I'm going offline", "batch my approvals", or gives a big task and says
   they won't be around. Front-loads ALL questions, decisions, secrets, and
   permission approvals into one upfront batch, then executes end-to-end without
@@ -10,7 +10,7 @@ description: Use BEFORE starting any long or multi-step build task when the
   is actually correct.
 ---
 
-# wrm-preflight — approve once, go offline, come back to verified work
+# ask-drish-now — approve once, go offline, come back to verified work
 
 The user's time comes in one block at the start, not scattered across the run.
 Every question you would ever ask, ask NOW. Every permission you would ever
@@ -31,7 +31,7 @@ AskUserQuestion (batch up to 4 per call, use as few calls as possible):
 
 - **Design decisions** — anything with more than one reasonable answer that
   changes the outcome (library choice, UI behavior, naming, scope edges).
-- **Security decisions** — anything the wrm-security-checker or good sense
+- **Security decisions** — anything the checkandsecure or good sense
   would flag mid-run: "may I install new packages?", "is it OK to change the
   auth flow?", "should destructive step X (migration, data rewrite) run?".
 - **Inputs only the user has** — API keys, account choices, URLs,
