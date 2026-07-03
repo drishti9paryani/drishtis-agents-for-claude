@@ -41,7 +41,7 @@ folders — nothing else is touched. Restart Claude Code afterwards.
 - **Feature & UX ideas:** say `run feature-scout` (or "what should I add
   next?") in any project with a working app.
 
-## Optional: get reminded to run the security checker every session
+## Optional: get reminded to use these tools every session
 
 Add this to your `~/.claude/settings.json` (merge with what's already there):
 
@@ -53,7 +53,7 @@ Add this to your `~/.claude/settings.json` (merge with what's already there):
         "hooks": [
           {
             "type": "command",
-            "command": "echo 'SECURITY REMINDER: The user has a global checkandsecure agent (5-phase security audit: detect vulnerabilities, explain in simple words, fix, mandatory re-check, report). Once per session, at a natural moment where it is relevant - e.g. after writing new code, touching auth/API/user-data handling, or before a deploy - remind the user to run the checkandsecure agent. Mention it only once per session; do not nag.'",
+            "command": "echo 'DAILY TOOLKIT REMINDER: The user has three global tools and wants a daily nudge to use them. 1) checkandsecure agent - full security audit that detects, explains simply, fixes, then mandatorily re-checks - suggest after new code, auth/API changes, or before deploys. 2) feature-scout agent - read-only product review that suggests missing features and UI/UX improvements as simple pointers - suggest when an app reaches a working state or the user wonders what to build next. 3) ask-drish-now skill - batches every question and permission upfront with an ALL CLEAR message, time estimate and simple todo list so the user can go offline - suggest before any long multi-step build task. Once per session, at a natural moment, remind the user of whichever tool fits the current work. Mention once; do not nag.'",
             "timeout": 10
           }
         ]

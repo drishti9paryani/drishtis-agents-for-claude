@@ -69,15 +69,47 @@ Also offer (don't force): running the built-in `/fewer-permission-prompts`
 skill, which mines past transcripts for safe read-only commands worth
 allowlisting permanently.
 
-## Phase 4 — The contract, then silence
+## Phase 4 — The ALL CLEAR message, then silence
 
-Print one final message before starting:
-- The plan as a numbered step list.
-- All assumptions being made (from Phase 2).
-- The approved permission list.
-- Stop conditions: "I will only stop before <the specific destructive or
-  irreversible actions not cleared upfront>; everything else runs to the
-  end."
+Once every question is asked and every permission is written, print one
+final message that starts with the exact heading:
+
+**"✅ ALL CLEAR — I have asked everything I intend to ask. You can leave now."**
+
+It MUST contain, in this order:
+
+1. **Time estimate** — a realistic estimate of total build time, plus when
+   (if ever) the user will be needed again. Two honest forms only:
+   - "You will not be needed again until the final report, estimated ~X
+     minutes/hours from now." — when everything is covered, OR
+   - "You will be needed again in ~X minutes for <specific thing>; after
+     that, free until the final report (~Y total)." — when one known step
+     could not be pre-cleared.
+   Base the estimate on the actual step list, not optimism; round up. If
+   genuinely uncertain, give a range ("40-70 minutes"), never a fake
+   precise number.
+2. **Todo list in clear simple language** — the numbered steps as things a
+   non-programmer can read ("Build the login page", "Connect it to the
+   database", "Test everything on mobile size"), each with a rough
+   per-step time.
+3. **Assumptions being made** (from Phase 2) — silence = consent to these.
+4. **The approved permission list.**
+5. **Stop conditions** — "I will only stop before <the specific destructive
+   or irreversible actions not cleared upfront>; everything else runs to
+   the end."
+
+### Mandatory self-check BEFORE sending the ALL CLEAR (every time, no skips)
+
+Do not print the ALL CLEAR until you have re-verified each item:
+- [ ] Walked the full step list once more — is there ANY step that could
+      still raise a question or permission popup? If yes, go back to
+      Phase 2/3 and clear it NOW; the ALL CLEAR would be a lie.
+- [ ] Time estimate present, honest, and derived from the step list?
+- [ ] Todos written in simple non-technical words with per-step times?
+- [ ] Assumptions, permissions, and stop conditions all listed?
+If any box fails, fix it before sending. An ALL CLEAR followed by an
+interruption is the one unforgivable failure of this skill — the user
+plans their time around it.
 
 Get one final "go". From that moment: do not ask permission for anything
 covered by the contract. If something unexpected needs approval mid-run,
