@@ -13,8 +13,8 @@ Copy-Item (Join-Path $repoRoot "skills\*") (Join-Path $claudeDir "skills\") -Rec
 
 Write-Host ""
 Write-Host "Installed to $claudeDir :" -ForegroundColor Green
-Write-Host "  - agents\totem.md"
-Write-Host "  - agents\rancho.md"
-Write-Host "  - skills\unagi\SKILL.md"
+Write-Host "  - agents\tars-secure.md"
+Write-Host "  - agents\rancho-ideas.md"
+Write-Host "  - skills\unagi-askfirst\SKILL.md"
 Write-Host ""
-Write-Host "Restart Claude Code, then try: 'run totem' or '/unagi'"
+Write-Host "Restart Claude Code, then try: 'run tars-secure' or '/unagi-askfirst'"

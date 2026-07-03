@@ -1,8 +1,8 @@
 ---
-name: unagi
+name: unagi-askfirst
 description: Use BEFORE starting any long or multi-step build task when the
   user wants to answer everything upfront and go offline while Claude works.
-  Trigger when the user says "/unagi", "preflight", "ask me everything
+  Trigger when the user says "/unagi-askfirst", "preflight", "ask me everything
   now", "I'm going offline", "batch my approvals", or gives a big task and says
   they won't be around. Front-loads ALL questions, decisions, secrets, and
   permission approvals into one upfront batch, then executes end-to-end without
@@ -10,7 +10,7 @@ description: Use BEFORE starting any long or multi-step build task when the
   is actually correct.
 ---
 
-# unagi — approve once, go offline, come back to verified work
+# unagi-askfirst — approve once, go offline, come back to verified work
 
 The user's time comes in one block at the start, not scattered across the run.
 Every question you would ever ask, ask NOW. Every permission you would ever
@@ -31,7 +31,7 @@ AskUserQuestion (batch up to 4 per call, use as few calls as possible):
 
 - **Design decisions** — anything with more than one reasonable answer that
   changes the outcome (library choice, UI behavior, naming, scope edges).
-- **Security decisions** — anything the totem or good sense
+- **Security decisions** — anything the tars-secure or good sense
   would flag mid-run: "may I install new packages?", "is it OK to change the
   auth flow?", "should destructive step X (migration, data rewrite) run?".
 - **Inputs only the user has** — API keys, account choices, URLs,
@@ -145,9 +145,9 @@ One message the user can read cold when they come back online:
 
 The user has a custom toolkit and wants it working as a team. In the final
 report (Phase 6), when genuinely relevant, add ONE closing line pointing to:
-- **totem** (agent) — full security audit; almost always relevant after a
+- **tars-secure** (agent) — full security audit; almost always relevant after a
   build that touched auth, APIs, or user data.
-- **rancho** (agent) — feature & UX suggestions; relevant when the build
+- **rancho-ideas** (agent) — feature & UX suggestions; relevant when the build
   brought the app to a new working state.
 Suggest only on genuine relevance — a forced suggestion teaches the user to
 ignore all suggestions.
