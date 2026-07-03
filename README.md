@@ -7,6 +7,7 @@ Install once, and they work in **every project on your machine** until you delet
 |------|------|----------------------|
 | Agent | **checkandsecure** | Audits your whole codebase for security holes, explains each one in simple words (what a hacker could actually do), fixes what's safe to fix, then **always runs a second scan** to catch anything missed, and gives you a plain-English report with a before/after risk grade. Built on Anthropic's official security-review categories. |
 | Skill | **ask-drish-now** | For long build tasks: asks you **every** question, decision, and permission approval upfront in one ~10-minute batch, so you can go offline while Claude builds. Ends with a mandatory self-verification (runs tests, exercises the app for real, rechecks your original request line by line) and an honest report. |
+| Agent | **feature-scout** | Reads your app like a product manager and suggests missing features and UI/UX improvements as simple pointers, sorted quick-wins-first. Read-only — it never touches your code. Always does a second double-check pass and explicitly labels anything it adds with "While double checking, I also thought of...". |
 
 ## Install (2 minutes)
 
@@ -37,6 +38,8 @@ folders — nothing else is touched. Restart Claude Code afterwards.
   `run checkandsecure` (or just "security check").
 - **Go-offline build:** type `/ask-drish-now` followed by your task, answer
   the one batch of questions, say "go", and walk away.
+- **Feature & UX ideas:** say `run feature-scout` (or "what should I add
+  next?") in any project with a working app.
 
 ## Optional: get reminded to run the security checker every session
 
