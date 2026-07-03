@@ -13,8 +13,8 @@ Copy-Item (Join-Path $repoRoot "skills\*") (Join-Path $claudeDir "skills\") -Rec
 
 Write-Host ""
 Write-Host "Installed to $claudeDir :" -ForegroundColor Green
-Write-Host "  - agents\checkandsecure.md"
-Write-Host "  - agents\feature-scout.md"
-Write-Host "  - skills\ask-drish-now\SKILL.md"
+Write-Host "  - agents\totem.md"
+Write-Host "  - agents\rancho.md"
+Write-Host "  - skills\unagi\SKILL.md"
 Write-Host ""
-Write-Host "Restart Claude Code, then try: 'run checkandsecure' or '/ask-drish-now'"
+Write-Host "Restart Claude Code, then try: 'run totem' or '/unagi'"
